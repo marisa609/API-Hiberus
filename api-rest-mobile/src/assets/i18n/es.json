@@ -1,0 +1,29 @@
+{
+    "HELLO": "Bienvenidx",
+    "BUTTONS": {
+        "LOGIN_IN": "Iniciar sesión",
+        "SIGN_IN": "Registrarse", 
+        "SUBMIT": "Enviar",
+        "BACK": "Volver",
+        "EXIT": "Salir"
+    },
+    "REQUIRED": {
+        "EMAIL" : "El email es obligatorio",
+        "PASSWORD" : "La contraseña es obligatoria",
+        "NAME" : "El nombre es obligatorio",
+        "SURNAME" : "El apellido es obligatorio"
+    },
+    "USERS": {
+        "USERS" : "Usuarios",
+        "PASSWORD" : "contraseña",
+        "NAME" : "nombre",
+        "SURNAME" : "Apellidos",
+        "EMAIL" : "email",
+        "EDIT" : "edit",
+        "DELETE" : "eliminar"
+    },
+    "204" :  "Empty response",
+    "409" :  "El email ya existe",
+    "404" :  "El email no funciona o la contraseña no es correcta",
+    "601" :  "El usuario no es válido"
+}

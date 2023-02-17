@@ -1,0 +1,15 @@
+.full-width-table {
+    width: 96%;
+    /* margin-right: 2%; */
+}
+  
+.mat-elevation-z8 {
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 50px;
+}
+
+mat-card-content {
+    overflow-x: scroll;
+}

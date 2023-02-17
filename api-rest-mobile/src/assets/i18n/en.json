@@ -1,0 +1,29 @@
+{
+    "HELLO": "Hello",
+    "BUTTONS": {
+        "LOGIN_IN": "Login",
+        "SIGN_IN": "Sign up", 
+        "SUBMIT": "Submit",
+        "BACK": "Back",
+        "EXIT": "Exit"
+    },
+    "REQUIRED": {
+        "EMAIL" : "The email is mandatory",
+        "PASSWORD" : "The password is mandatory",
+        "NAME" : "The name is mandatory",
+        "SURNAME" : "The surname is mandatory"
+    },
+    "USERS": {
+        "USERS" : "Users",
+        "PASSWORD" : "password",
+        "NAME" : "name",
+        "SURNAME" : "surname",
+        "EMAIL" : "email",
+        "EDIT" : "edit",
+        "DELETE" : "delete"
+    },
+    "204" :  "Empty response",
+    "409" :  "Email already exists",
+    "404" :  "User email not found or password invalid",
+    "601" :  "User is not validated"
+}

@@ -1,0 +1,49 @@
+<app-header></app-header> 
+<div class="mat-elevation-z8">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>{{"USERS.USERS" | translate | uppercase}}</h1>
+        <button mat-icon-button color="primary" routerLink="/new"><mat-icon>add</mat-icon></button>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table class="full-width-table" matSort aria-label="Elements">
+        <ng-container matColumnDef="name" class="prueba">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{"USERS.NAME" | translate | uppercase}}</th>
+          <td mat-cell *matCellDef="let row">{{row.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="surname" class="prueba">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{"USERS.SURNAME" | translate | uppercase}}</th>
+          <td mat-cell *matCellDef="let row">{{row.surname}}</td>
+        </ng-container>
+        <ng-container matColumnDef="email" class="prueba">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{"USERS.EMAIL" | translate | uppercase}}</th>
+          <td mat-cell *matCellDef="let row">{{row.email}}</td>
+        </ng-container>
+        <ng-container matColumnDef="edit" class="prueba">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{"USERS.EDIT"  | translate | uppercase}}</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-button routerLink="/edit/{{row.id}}"><mat-icon>edit</mat-icon></button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="action" class="prueba">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>{{"USERS.DELETE" | translate | uppercase}}</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary" (click)="delete(row.id)"><mat-icon>delete</mat-icon></button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator
+          [length]="dataSource?.data?.length"
+          [pageIndex]="0"
+          [pageSize]="10"
+          [pageSizeOptions]="[5, 10, 20]"
+          aria-label="Select page">
+      </mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>
+<app-footer></app-footer> 

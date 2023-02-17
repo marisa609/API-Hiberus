@@ -1,0 +1,40 @@
+<div id="fondo">
+    <img [src]="fotoFondo" style='width:100%;height:100%'>
+    <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-card class="login-card">
+        <div>
+          <img id="fotoHiberusLogin" [src]="fotoHiberusLogin">
+        </div>
+        <h2>{{"HELLO" | translate | uppercase}}</h2>
+        <mat-card-header class="center">
+          <mat-card-title></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="User" formControlName="email"/>
+                <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                  {{"REQUIRED.EMAIL" | translate}}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Password" formControlName="password" type="password"/>
+                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                  {{"REQUIRED.PASSWORD" | translate}}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="center">
+          <button [disabled]= "loginForm.invalid" mat-raised-button color="primary" type="submit">{{"BUTTONS.LOGIN_IN" | translate}}</button>
+          <button mat-raised-button color="warn" type="submit" (click)="signIn()">{{"BUTTONS.SIGN_IN" | translate}}</button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>

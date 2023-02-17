@@ -1,0 +1,12 @@
+div {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    background-color: rgb(205, 132, 251);
+    width: 100%;
+}
+#footer {
+    position:fixed; 
+    bottom: 0px; 
+    top:auto;
+    text-align: center;
+}

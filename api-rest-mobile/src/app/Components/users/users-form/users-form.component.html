@@ -1,0 +1,48 @@
+<app-header></app-header>
+<form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>{{"USERS.USERS" | translate | uppercase}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="{{'USERS.NAME' | translate}}" formControlName="name">
+            <mat-error *ngIf="userForm.controls['name'].hasError('required')">
+              {{"REQUIRED.NAME" | translate}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="{{'USERS.SURNAME' | translate}}" formControlName="surname">
+            <mat-error *ngIf="userForm.controls['surname'].hasError('required')">
+              {{"REQUIRED.SURNAME" | translate}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="{{'USERS.EMAIL' | translate}}" formControlName="email">
+            <mat-error *ngIf="userForm.controls['email'].hasError('required')">
+              {{"REQUIRED.EMAIL" | translate}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row" *ngIf="displayPassword">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="{{'USERS.PASSWORD' | translate}}" formControlName="password">
+            <mat-error *ngIf="userForm.controls['password'].hasError('required')">
+              {{"REQUIRED.PASSWORD" | translate}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">{{"BUTTONS.SUBMIT" | translate}}</button>
+        <button mat-raised-button color="accent" routerLink="/users" >{{"BUTTONS.BACK" | translate}}</button>
+        <br><br>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+<app-footer></app-footer>

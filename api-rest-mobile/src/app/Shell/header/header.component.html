@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span>Hiberus</span>
+  <img id="fotoHiberusLogin" [src]="fotoHiberusLogin">
+  <span class="spacer"></span>
+  <a mat-button routerLink="/home">Home</a>
+  <a mat-button routerLink="/users">{{"USERS.USERS" | translate}}</a>
+  <a mat-button (click)="signOff()">{{"BUTTONS.EXIT" | translate}}</a>
+</mat-toolbar>
